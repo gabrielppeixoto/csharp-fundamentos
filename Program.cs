@@ -27,3 +27,63 @@ DateTime data2 = DateTime.Now.AddDays(5);   //Adiciona 5 dias à data atual
 Console.WriteLine($"Data atual: {dataAtual}");
 Console.WriteLine($"Nova data: {data2}");
 Console.WriteLine($"Data formatada: {dataAtual.ToString("dd/MM/yy")}");
+
+//------------------------------ Tipos de Operadores -------------------------------------------------------------------
+int a = 10;
+int b = 234;
+int c = a + b;
+c += 5;
+c += 5;
+
+//Converter string para inteiro, duas opções; diferença está no tratamento de valores nulos
+string d = "5";
+int dInt = Convert.ToInt32(d); // Se nulo, converte o valor para 0
+int dInt2 = int.Parse(d);       // Se nulo, lança uma ArgumentNullException
+int.TryParse(d, out int h);
+
+//Cast implícito
+int e = 63;
+double f = e;
+long g = e;
+
+//Operadores condicionais
+int quantidadeEmEstoque = 14;
+int quantidadeCompra = 4;
+
+if(quantidadeCompra == 0)
+{
+    Console.WriteLine("Compra inválida.");
+}
+else if(quantidadeCompra <= quantidadeEmEstoque)
+{
+    Console.WriteLine("Venda realizada.");
+}
+else
+{
+    Console.WriteLine("Não se poderealizar a venda.");
+}
+
+Console.WriteLine("Digite uma letra: ");
+string letra2 = Console.ReadLine();
+
+switch (letra2)
+{
+    case "a":
+    case "e":
+    case "i":
+    case "o":
+    case "u":
+        Console.WriteLine("Vogal");
+        break;
+
+    default:
+        Console.WriteLine("Não é uma vogal");
+        break;
+}
+
+//Operadores lógicos
+bool i = true;
+bool j = false;
+bool operacaoOr = i || j;
+bool operacaoAnd = i && j;
+bool operacaoNot = !i;
