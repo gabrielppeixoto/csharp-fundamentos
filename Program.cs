@@ -87,3 +87,31 @@ bool j = false;
 bool operacaoOr = i || j;
 bool operacaoAnd = i && j;
 bool operacaoNot = !i;
+
+// --------------------------------- Estruturas de repetição ---------------------------------------
+int numero2 = 10;
+for (int jota = 0; jota < numero2; jota++)
+{
+    Console.WriteLine($"{jota}");
+}
+
+while (numero2 >= 5)
+{
+    Console.WriteLine($"{numero2} -- Testando while");
+    numero2--;
+    if(numero2 == 6)
+    {
+        break;
+    }
+    else if(numero2 == 7)
+    {
+        continue;
+    }
+}
+
+int numero3 = 15;
+do
+{
+    Console.WriteLine($"{numero3} -- Testando do while");
+    numero3--;
+} while (numero3 > 6);
